@@ -84,7 +84,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
+                <version>3.14.0</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
@@ -94,6 +94,16 @@
                     </compilerArgs>
                 </configuration>
             </plugin>
+
+            <plugin>
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>exec-maven-plugin</artifactId>
+              <version>3.5.1</version>
+              <configuration>
+                <mainClass>com.example.weatherapp.Main</mainClass> <!-- Replace with your actual fully qualified main class -->
+              </configuration>
+            </plugin>
+
 
             <!-- JavaFX Maven Plugin to run the app -->
             <plugin>
